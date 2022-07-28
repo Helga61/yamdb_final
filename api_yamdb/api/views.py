@@ -1,37 +1,26 @@
 from django.conf import settings
 from django.contrib.auth import get_user_model
-from django.shortcuts import get_object_or_404
 from django.db import IntegrityError
-from django_filters.rest_framework import DjangoFilterBackend
 from django.db.models import Avg
-from rest_framework import filters, viewsets
-from rest_framework import permissions
+from django.shortcuts import get_object_or_404
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters, permissions, viewsets
 from rest_framework.decorators import action, api_view
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
-
-from .mixins import GenresCategoriesViewSet
-from .serializers import (
-    BasicUserSerializer,
-    CategorySerializer,
-    CommentSerializer,
-    FullUserSerializer,
-    GenreSerializer,
-    ReviewSerializer,
-    ReadTitlesSerializer,
-    UpdateTitlesSerializer,
-    SignupUserSerializer,
-    TokenRequestSerializer,
-    ReviewCreateSerializer,
-)
-from .permissions import (
-    IsReadOnlyOrIsAuthorOrIsAdminOrIsModerator,
-    IsReadOnly,
-    IsAdmin
-)
 from reviews.models import Category, Genre, Review, Title
-from .utils import generate_confirmation_code
+
 from .filters import TitleFilter
+from .mixins import GenresCategoriesViewSet
+from .permissions import (IsAdmin, IsReadOnly,
+                          IsReadOnlyOrIsAuthorOrIsAdminOrIsModerator)
+from .serializers import (BasicUserSerializer, CategorySerializer,
+                          CommentSerializer, FullUserSerializer,
+                          GenreSerializer, ReadTitlesSerializer,
+                          ReviewCreateSerializer, ReviewSerializer,
+                          SignupUserSerializer, TokenRequestSerializer,
+                          UpdateTitlesSerializer)
+from .utils import generate_confirmation_code
 
 User = get_user_model()
 
