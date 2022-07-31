@@ -40,7 +40,7 @@ jobs:
       - name: Push to Docker Hub
         uses: docker/build-push-action@v2 
         with:
-          file: api_yamdb/Dockerfile
+          file: ./api_yamdb/Dockerfile
           push: true
           tags: helga61/yamdb_final:latest
   deploy:
@@ -57,7 +57,6 @@ jobs:
           script: |
             sudo docker-compose stop
             sudo docker-compose rm web
-            sudo docker pull helga61/yamdb_final:latest
             touch .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
