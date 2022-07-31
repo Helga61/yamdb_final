@@ -1,5 +1,6 @@
 ![example workflow](https://github.com/helga61/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
 
+Ссылка на проект: http://51.250.29.22/admin
 ## Описание
 Бэкенд проекта YaMDb.
 
@@ -47,11 +48,11 @@ docker-compose exec web python manage.py collectstatic --no-input
 docker-compose exec web python manage.py loaddata fixtures.json
 ```
 
-Сервис доступен по адресу http://localhost/admin
+Сервис доступен по адресу http://51.250.29.22/admin
 
 ## документация API
 
-Документация API доступна по адресу http://localhost/redoc/
+Документация API доступна по адресу http://51.250.29.22/redoc/
 
 ### Примеры работы с API
 
