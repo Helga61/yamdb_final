@@ -2,7 +2,7 @@ FROM python:3.7-slim
 
 WORKDIR /app
 
-COPY ./api_yamdb/requirements.txt  .
+COPY ./  .
 
 RUN python3 -m pip install --upgrade pip
 
