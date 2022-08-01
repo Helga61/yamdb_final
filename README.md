@@ -1,4 +1,4 @@
-![example workflow](https://github.com/helga61/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+[![YAMBD-api workflow](https://github.com/Helga61/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)](https://github.com/Helga61/yamdb_final/actions/workflows/yamdb_workflow.yml)
 
 Ссылка на проект: http://51.250.23.31/admin
 ## Описание
